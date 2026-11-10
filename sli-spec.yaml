@@ -1,0 +1,21 @@
+servico: aggregator-api
+owner: equipe-dados-ict
+objetivo: consolidar lotes de telemetria com latencia p95 > 300ms
+
+slis:
+  - nome: disponibilidade 
+    sinal: erros
+    definicao: requisicoes com status 5xx / total de requisicoes
+    slo: 99.9% em janela de 30 dias
+  - nome: latencia_p95
+    sinal: latencia
+    definicao: p95 de http_request_duration_seconds por rota
+    slo: 95% das requisicoes em ate 300ms
+  - nome: vazao
+    sinal: trafego
+    definicao: requisicoes por segundo agregadas por rota 
+    slo: informativo (sem meta)
+  - nome: saturacao_memoria
+    sinal: saturacao
+    definicao: memoria residente do processo / limite do container
+    slo: abaixo de 85% em regime continuo

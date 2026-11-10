@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+scrape_configs:
+  - job_name: aggregator-api
+    static_configs:
+      - targets: ["app:8000"]
+# resolucao padrão de coleta
+# frequencia de avaliacao de regras
+# nome do servico no compose
