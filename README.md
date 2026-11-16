@@ -11,6 +11,8 @@ Prometheus e Grafana.
 
 - Docker com Docker Compose (recomendado); ou
 - Python 3.14+ para executar localmente.
+- Prometheus
+- Grafana
 
 ## Executar com Docker Compose
 
